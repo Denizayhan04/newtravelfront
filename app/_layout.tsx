@@ -4,13 +4,15 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="notifications" options={{ 
+      <Stack.Screen name="(modals)/notifications" options={{ 
         title: 'Notifications',
-        presentation: 'card'
+        presentation: 'modal',
+        animation: 'slide_from_bottom',
       }} />
-      <Stack.Screen name="messages" options={{ 
+      <Stack.Screen name="(modals)/messages" options={{ 
         title: 'Messages',
-        presentation: 'card'
+        presentation: 'modal',
+        animation: 'slide_from_bottom',
       }} />
     </Stack>
   );

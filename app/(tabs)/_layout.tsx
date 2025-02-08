@@ -9,13 +9,13 @@ function CustomHeader() {
       <View style={styles.headerRight}>
         <TouchableOpacity 
           style={styles.headerButton}
-          onPress={() => router.push('/notifications')}
+          onPress={() => router.push('/(modals)/notifications')}
         >
           <Ionicons name="notifications-outline" size={24} color="black" />
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.headerButton}
-          onPress={() => router.push('/messages')}
+          onPress={() => router.push('/(modals)/messages')}
         >
           <Ionicons name="paper-plane-outline" size={24} color="black" />
         </TouchableOpacity>

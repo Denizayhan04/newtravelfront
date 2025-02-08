@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function MessagesScreen() {
+export default function NotificationsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Messages Screen</Text>
+      <Text style={styles.text}>Notifications Screen</Text>
     </View>
   );
 }
@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
   text: {
     fontSize: 24,
