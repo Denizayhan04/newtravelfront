@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function TabOneScreen() {
+export default function CommunitiesScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello World</Text>
+      <Text style={styles.text}>Communities Screen</Text>
     </View>
   );
 }
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
   },
-});
+}); 
