@@ -1,23 +1,24 @@
 import { Tabs, router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import Colors from '@/constants/Colors';
 
 function CustomHeader() {
   return (
     <View style={styles.header}>
-      <Text style={styles.logoText}>TravelApp</Text>
+      <Text style={[styles.logoText, { color: Colors.primary }]}>TravelApp</Text>
       <View style={styles.headerRight}>
         <TouchableOpacity 
           style={styles.headerButton}
           onPress={() => router.push('/(modals)/notifications')}
         >
-          <Ionicons name="notifications-outline" size={24} color="black" />
+          <Ionicons name="notifications-outline" size={24} color={Colors.primary} />
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.headerButton}
           onPress={() => router.push('/(modals)/messages')}
         >
-          <Ionicons name="paper-plane-outline" size={24} color="black" />
+          <Ionicons name="paper-plane-outline" size={24} color={Colors.primary} />
         </TouchableOpacity>
       </View>
     </View>
@@ -28,10 +29,12 @@ export default function TabLayout() {
   return (
     <Tabs screenOptions={{ 
       header: () => <CustomHeader />,
-      tabBarActiveTintColor: '#007AFF',
-      tabBarInactiveTintColor: 'gray',
+      tabBarActiveTintColor: Colors.primary,
+      tabBarInactiveTintColor: Colors.tabIconDefault,
       tabBarStyle: {
         paddingBottom: 5,
+        backgroundColor: Colors.background,
+        borderTopColor: Colors.border,
       }
     }}>
       <Tabs.Screen
@@ -91,9 +94,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 60,
     paddingBottom: 10,
-    backgroundColor: 'white',
+    backgroundColor: Colors.background,
     borderBottomWidth: 1,
-    borderBottomColor: '#f0f0f0',
+    borderBottomColor: Colors.border,
   },
   logoText: {
     fontSize: 22,

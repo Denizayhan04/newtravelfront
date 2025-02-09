@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
+import Colors from '../../constants/Colors';
 
 export default function MessagesScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Messages Screen</Text>
+    <View style={[styles.container, { backgroundColor: Colors.background }]}>
+      <Text style={[styles.text, { color: Colors.text }]}>Messages Screen</Text>
     </View>
   );
 }
@@ -13,7 +14,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
   },
   text: {
     fontSize: 24,
